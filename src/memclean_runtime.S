@@ -91,7 +91,35 @@ detect_cpu:
     ret
 
 .p2align 4
+memset_rep:
+    mov rax, rcx
+    push rdi
+    mov rdi, rcx
+    mov rcx, r8
+    mov r11, rax
+    mov eax, edx
+    rep stosb
+    pop rdi
+    mov rax, r11
+    ret
+
+.p2align 4
+memcpy_rep:
+    mov rax, rcx
+    push rdi
+    push rsi
+    mov rdi, rcx
+    mov rsi, rdx
+    mov rcx, r8
+    rep movsb
+    pop rsi
+    pop rdi
+    ret
+
+.p2align 4
 memset_sse2:
+    cmp r8, 1024
+    jae memset_rep
     mov rax, rcx
     cmp r8, 16
     jb .Lms_small
@@ -130,6 +158,8 @@ memset_sse2:
 
 .p2align 4
 memset_avx2:
+    cmp r8, 4096
+    jae memset_rep
     cmp r8, 32
     jb memset_sse2
     mov rax, rcx
@@ -173,6 +203,8 @@ memset_avx2:
 
 .p2align 4
 copy_forward_sse2:
+    cmp r8, 4096
+    jae memcpy_rep
     mov rax, rcx
     cmp r8, 16
     jb memcpy_small
@@ -243,6 +275,8 @@ memcpy_small:
 
 .p2align 4
 copy_forward_avx2:
+    cmp r8, 4096
+    jae memcpy_rep
     cmp r8, 32
     jb copy_forward_sse2
     mov rax, rcx
