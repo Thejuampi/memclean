@@ -66,6 +66,7 @@ The project keeps a pure C core apart from the platform shell:
 
 - `memclean_core.c` / `memclean_core.h`: flags, parsing, settings normalization, masks, auto-clean decisions, report checks, status names, and formatting. No Win32, no IO, no global state.
 - `memclean_engine.c`: NT memory APIs.
+- `memclean_runtime.S`: x86-64 assembly for `memset`, `memcpy`, and `memmove`, with SSE2 and AVX2 paths selected by CPUID.
 - `memclean_host.c`: registry, tray, worker process, and elevation.
 - `memclean_view.c`: Win32 controls and GDI+ painting.
 - `memclean_report.c`: CLI output.
