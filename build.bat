@@ -28,5 +28,3 @@ if errorlevel 1 (
 
 del /q memclean.res
 echo Built memclean.exe and memclean-cli.exe
-
-
