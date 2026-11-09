@@ -1,0 +1,36 @@
+1 ICON "memclean.ico"
+
+101 RCDATA "memclean_mark.png"
+102 BITMAP "coffee4.bmp"
+
+1 24 "memclean.manifest"
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS 0x40004
+FILETYPE 0x1
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName", "Juan"
+      VALUE "FileDescription", "MemClean - native memory cleaner"
+      VALUE "FileVersion", "1.0.0.0"
+      VALUE "InternalName", "memclean"
+      VALUE "LegalCopyright", "Copyright (C) 2026 Juan"
+      VALUE "License", "GPL-3.0-or-later"
+      VALUE "OriginalFilename", "memclean.exe"
+      VALUE "ProductName", "MemClean"
+      VALUE "ProductVersion", "1.0.0.0"
+      VALUE "Website", "https://thejuampi.github.io/memclean/"
+      VALUE "Repository", "https://github.com/Thejuampi/memclean"
+      VALUE "Support", "https://buymeacoffee.com/thejuampi"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END

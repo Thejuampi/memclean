@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#06100f">
+  <meta name="description" content="MemClean is a small native Windows memory cleaner. Free working sets, file cache, and standby lists without a runtime or installer.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MemClean - Native Windows Memory Cleaner">
+  <meta property="og:description" content="Free memory with a small native Windows tool. No runtime, no installer, no noise.">
+  <meta property="og:image" content="https://thejuampi.github.io/memclean/assets/memclean.png">
+  <meta property="og:image:alt" content="MemClean showing physical memory, clean regions, and auto-clean controls">
+  <title>MemClean - Native Windows Memory Cleaner</title>
+  <link rel="icon" href="assets/memclean.ico" sizes="any">
+  <link rel="preload" href="assets/memclean.png" as="image" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MemClean home">
+      <img class="brand-mark" src="assets/memclean-mark.png" width="32" height="32" alt="">
+      <span>MemClean</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#download">Download</a>
+      <a href="#apps">Apps</a>
+      <a href="https://github.com/Thejuampi/memclean" rel="noreferrer">GitHub</a>
+    </nav>
+    <a class="header-download" href="#download">Download</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="kicker"><span>NATIVE MEMORY TOOL</span><span class="kicker-note">C23 &middot; Win32</span></p>
+        <h1>Free memory.<br><em>Keep it simple.</em></h1>
+        <p class="lede">MemClean frees working sets, flushes the file cache, and purges standby lists from one small window. No runtime, no installer, no noise.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#download">Download MemClean</a>
+          <a class="button button-ghost" href="https://github.com/Thejuampi/memclean">View source</a>
+        </div>
+        <ul class="hero-facts">
+          <li><strong>77 KB</strong><span>desktop build</span></li>
+          <li><strong>12 KB</strong><span>CLI build</span></li>
+          <li><strong>0</strong><span>runtime DLLs</span></li>
+        </ul>
+      </div>
+
+      <figure class="hero-shot">
+        <div class="shot-glow" aria-hidden="true"></div>
+        <img src="assets/memclean.png" width="520" height="602" alt="MemClean showing physical memory usage, clean regions, auto-clean, and a Buy me a coffee button">
+        <figcaption><span>MEMCLEAN 1.0</span><b><i></i>READY &middot; MONITORING</b></figcaption>
+      </figure>
+    </section>
+
+    <section class="proof" aria-label="Key facts">
+      <div><strong>Pick</strong><span>the regions you need</span></div>
+      <div><strong>Clean</strong><span>with an elevated worker</span></div>
+      <div><strong>Automate</strong><span>by memory threshold</span></div>
+      <div><strong>Repeat</strong><span>from the tray or CLI</span></div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Small by design</p>
+          <h2>Everything you need.<br>Nothing you don't.</h2>
+        </div>
+        <p class="section-intro">The window is compact on purpose. Every control maps to a real Windows memory operation, and every operation reports back in plain text.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="card-index">01</span>
+          <h3>Working sets</h3>
+          <p>Empty the working set of every process so pages return to the system.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-index">02</span>
+          <h3>File cache</h3>
+          <p>Flush the system file cache when disk-backed pages are not needed.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-index">03</span>
+          <h3>Standby lists</h3>
+          <p>Purge the standby list, or only the low-priority portion, to reclaim cached memory.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-index">04</span>
+          <h3>Registry and combine</h3>
+          <p>Flush registry hives and combine memory lists on supported Windows builds.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-index">05</span>
+          <h3>Auto-clean</h3>
+          <p>Run automatically when memory load crosses your threshold. A cooldown keeps it calm.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-index">06</span>
+          <h3>Two frontends</h3>
+          <p>The desktop window and the scriptable CLI share the same engine and result format.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section architecture" id="architecture">
+      <div class="architecture-copy">
+        <p class="eyebrow">Functional core &middot; imperative shell</p>
+        <h2>A small app<br>with a clean split.</h2>
+        <p>The domain logic is a pure C core: flag parsing, settings, masks, auto-clean decisions, and formatting. The shell owns Win32, GDI+, the registry, and process creation.</p>
+        <div class="ledger" role="list" aria-label="Technical facts">
+          <div role="listitem"><span>Language</span><strong>C23</strong></div>
+          <div role="listitem"><span>Interface</span><strong>Win32 &middot; GDI+</strong></div>
+          <div role="listitem"><span>Runtime</span><strong>None</strong></div>
+          <div role="listitem"><span>Config</span><strong>HKCU</strong></div>
+          <div role="listitem"><span>License</span><strong>GPL-3.0-or-later</strong></div>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>memclean-cli</span></div>
+        <pre><code><span class="prompt">&gt;</span> memclean-cli status
+Memory
+  physical total:     31.7 GB
+  physical available: 17.2 GB
+
+<span class="prompt">&gt;</span> memclean-cli clean --all --force
+Clean
+  working set: failed (STATUS_PRIVILEGE_NOT_HELD)
+  standby list: failed (STATUS_PRIVILEGE_NOT_HELD)
+
+<span class="prompt">&gt;</span> memclean-cli clean --safe
+Clean
+  working set: ok
+  file cache: ok
+  modified list: ok</code></pre>
+      </div>
+    </section>
+
+    <section class="section steps" id="how">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">From window to clean</p>
+          <h2>Four steps.<br>No ceremony.</h2>
+        </div>
+        <p class="section-intro">Open the app, choose what to free, and press the big lime button. Or skip the window and call the CLI.</p>
+      </div>
+
+      <div class="step-grid">
+        <article class="step"><span>01</span><h3>Choose regions</h3><p>Start with the safe set, or enable standby, registry, and combine.</p></article>
+        <article class="step"><span>02</span><h3>Clean now</h3><p>The app launches an elevated worker and keeps the window responsive.</p></article>
+        <article class="step"><span>03</span><h3>Read the result</h3><p>Each region reports ok or a named NTSTATUS failure. No guessing.</p></article>
+        <article class="step"><span>04</span><h3>Automate</h3><p>Set a threshold and cooldown. MemClean cleans while you work.</p></article>
+      </div>
+    </section>
+
+    <section class="section downloads" id="download">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Windows 10 / 11 &middot; x64</p>
+          <h2>Take the small build.</h2>
+        </div>
+        <p class="section-intro">Both binaries are portable. Cleaning needs administrator rights; the CLI can still report status without elevation.</p>
+      </div>
+
+      <div class="download-grid">
+        <article class="download-card">
+          <div class="download-head">
+            <span class="app-icon">M</span>
+            <div><h3>Desktop</h3><p>MemClean for Windows</p></div>
+            <span class="version">v1.0.0</span>
+          </div>
+          <p class="download-copy">The full window: memory readout, region picker, auto-clean, tray, and startup.</p>
+          <a class="button button-primary" href="https://github.com/Thejuampi/memclean/releases/latest/download/memclean.exe">Download memclean.exe</a>
+          <p class="download-meta">77 KB &middot; Windows 10 / 11 x64 &middot; unsigned</p>
+        </article>
+
+        <article class="download-card">
+          <div class="download-head">
+            <span class="app-icon app-icon-ghost">&gt;_</span>
+            <div><h3>CLI</h3><p>MemClean for scripts</p></div>
+            <span class="version">v1.0.0</span>
+          </div>
+          <p class="download-copy">Status and clean commands with the same engine, without a window.</p>
+          <a class="button button-primary" href="https://github.com/Thejuampi/memclean/releases/latest/download/memclean-cli.exe">Download memclean-cli.exe</a>
+          <p class="download-meta">12 KB &middot; status without admin &middot; clean with elevation</p>
+        </article>
+      </div>
+
+      <p class="build-note">No release for your setup? <a href="https://github.com/Thejuampi/memclean">Clone the repository</a> and run <code>build.bat</code> with GCC 15.2+ and MinGW-w64.</p>
+    </section>
+
+    <section class="support">
+      <div>
+        <p class="eyebrow">Support the work</p>
+        <h2>MemClean is free.<br>It stays small.</h2>
+        <p>If it saves you time, you can buy me a coffee. The button opens Buy Me a Coffee in your browser.</p>
+      </div>
+      <a class="coffee-link" href="https://buymeacoffee.com/thejuampi" aria-label="Buy Thejuampi a coffee">
+        <img src="assets/coffee.png" width="85" height="23" alt="Buy me a coffee">
+      </a>
+    </section>
+
+    <section class="section apps" id="apps">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Thejuampi apps</p>
+          <h2>Small tools.<br>Real work.</h2>
+        </div>
+        <p class="section-intro">MemClean is part of a growing set of compact native utilities.</p>
+      </div>
+
+      <div class="apps-grid">
+        <a class="app-card current" href="#top">
+          <img src="assets/memclean-mark.png" width="56" height="56" alt="">
+          <div>
+            <div class="app-title"><h3>MemClean</h3><span class="tag tag-live">Current</span></div>
+            <p>Native Windows memory cleaner.</p>
+            <div class="tags"><span>Windows</span><span>C23</span><span>Win32</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="https://thejuampi.github.io/ibt-asm/">
+          <span class="app-icon app-icon-ibt">IBT</span>
+          <div>
+            <div class="app-title"><h3>IntelBurnTest</h3><span class="tag">App</span></div>
+            <p>CPU stability testing for Windows, Linux, and bootable USB.</p>
+            <div class="tags"><span>Assembly</span><span>Windows</span><span>Linux</span><span>UEFI</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top" aria-label="MemClean home">
+      <img class="brand-mark" src="assets/memclean-mark.png" width="32" height="32" alt="">
+      <span>MemClean</span>
+    </a>
+    <p>Created by <strong>Thejuampi</strong>. Native tools for Windows.</p>
+    <div>
+      <a href="https://github.com/Thejuampi/memclean">GitHub</a>
+      <a href="https://github.com/Thejuampi/memclean/releases">Releases</a>
+      <a href="https://thejuampi.github.io/ibt-asm/">IntelBurnTest</a>
+      <a href="https://buymeacoffee.com/thejuampi">Buy me a coffee</a>
+    </div>
+  </footer>
+</body>
+</html>
+
+
