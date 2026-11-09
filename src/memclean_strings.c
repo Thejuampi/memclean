@@ -29,8 +29,9 @@ const wchar_t MC_TEXT_RESULT_TITLE[] = L"MemClean result";
 const wchar_t MC_TEXT_ABOUT_TITLE[] = L"About MemClean";
 const wchar_t MC_TEXT_AUTO_OK[] = L"Auto-clean finished.";
 const wchar_t MC_TEXT_AUTO_FAIL[] = L"Auto-clean finished with errors.";
-const wchar_t MC_TEXT_ABOUT_BODY[] = L"MemClean 1.0\r\nCopyright (C) 2026 Juan\r\n\r\nLicense: GNU GPL v3 or later\r\n"
-                                     L"This program comes with ABSOLUTELY NO WARRANTY.\r\n\r\n"
-                                     L"Website: https://thejuampi.github.io/memclean/\r\n"
-                                     L"Source: https://github.com/Thejuampi/memclean\r\n"
-                                     L"Support: https://buymeacoffee.com/thejuampi";
+const wchar_t MC_TEXT_ABOUT_BODY[] =
+    L"MemClean 1.0.1\r\nCopyright (C) 2026 Juan\r\n\r\nLicense: GNU GPL v3 or later\r\n"
+    L"This program comes with ABSOLUTELY NO WARRANTY.\r\n\r\n"
+    L"Website: https://thejuampi.github.io/memclean/\r\n"
+    L"Source: https://github.com/Thejuampi/memclean\r\n"
+    L"Support: https://buymeacoffee.com/thejuampi";
